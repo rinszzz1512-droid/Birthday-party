@@ -111,9 +111,63 @@
             animation: rotate 4s linear infinite;
         }
 
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* Hero video styling */
+        .hero-video-container {
+            margin: 30px 0;
+            position: relative;
+            z-index: 3;
+        }
+
+        .video-frame {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #ff6b9d, #ff1493);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-play-btn {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: videoPulse 2s ease-in-out infinite;
+        }
+
+        .video-info {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .video-duration {
+            background: rgba(0,0,0,0.6);
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            font-style: italic;
         }
 
         /* Story sections */
@@ -469,6 +523,22 @@
             .story-container {
                 padding: 15px;
             }
+
+            .showcase-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .showcase-frame {
+                transform: rotate(0deg);
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .video-frame,
+            .video-frame-large {
+                max-width: 100%;
+            }
         }
 
         /* Floating hearts animation */
@@ -503,10 +573,26 @@
     <div class="floating-bg"></div>
 
     <div class="story-container">
-        <!-- Hero Story Section -->
+        <!-- Hero Story Section with Video -->
         <div class="hero-story">
             <h1 class="hero-title">Happy 23rd Birthday!</h1>
             <p class="hero-subtitle">🎉 HAPPIEST BIRTHDAY TO THE OWNER OF MY HEART 💖</p>
+            
+            <!-- Opening Video -->
+            <div class="hero-video-container">
+                <div class="video-frame">
+                    <div class="video-placeholder">
+                        <div class="video-play-btn">▶️</div>
+                        <div class="video-info">
+                            📹 OPENING VIDEO<br>
+                            <small>Birthday Surprise Behind the Scenes</small><br>
+                            <span class="video-duration">0:11</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="video-caption">The magical beginning of your special day! 🎬✨</p>
+            </div>
+            
             <div class="birthday-emoji">🎂</div>
         </div>
 
@@ -543,27 +629,25 @@
             <div class="photo-layout-1">
                 <div class="photo-card">
                     <div class="photo-main">
-                        <div class="video-indicator">📹</div>
                         🎈✨<br>
-                        [VIDEO]<br>
-                        Balloon Preparation<br>
-                        Behind the Scenes
+                        Beautiful Balloon<br>
+                        Number 23 Setup
                     </div>
                     <div class="photo-caption">
-                        <div class="photo-title">Getting Ready Together</div>
-                        <div class="photo-desc">Watch how we prepare the magical number 23 balloons for your special day</div>
+                        <div class="photo-title">Perfect Age Display</div>
+                        <div class="photo-desc">Silver and pink balloons arranged perfectly for your 23rd birthday</div>
                     </div>
                 </div>
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        🎈💖<br>
-                        Beautiful<br>
-                        Balloon Setup
+                        🎁💖<br>
+                        Surprise Gifts<br>
+                        & Decorations
                     </div>
                     <div class="photo-caption">
-                        <div class="photo-title">Perfect Decoration</div>
-                        <div class="photo-desc">The final result of our balloon arrangement</div>
+                        <div class="photo-title">Sweet Surprises</div>
+                        <div class="photo-desc">Special gifts and decorations prepared with love</div>
                     </div>
                 </div>
             </div>
@@ -591,11 +675,9 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        <div class="video-indicator">📹</div>
-                        🕯️✨<br>
-                        [VIDEO]<br>
-                        Candle Blowing<br>
-                        Magic
+                        🌟✨<br>
+                        Birthday Magic<br>
+                        Happening
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Wishes Come True</div>
@@ -642,15 +724,14 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        <div class="video-indicator">📹</div>
-                        🎂✨<br>
-                        [VIDEO]<br>
-                        Cake Cutting<br>
-                        Ceremony
+                        🍰🎉<br>
+                        Beautiful<br>
+                        Birthday Cake<br>
+                        Cutting Ceremony
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Birthday Tradition</div>
-                        <div class="photo-desc">Watch the beautiful cake cutting ceremony filled with love and laughter</div>
+                        <div class="photo-desc">Beautiful cake cutting ceremony filled with love and laughter</div>
                     </div>
                 </div>
             </div>
@@ -679,11 +760,10 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        <div class="video-indicator">📹</div>
                         🍰💕<br>
-                        [VIDEO]<br>
                         Sweet<br>
-                        Celebration
+                        Celebration<br>
+                        Moments
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Sweet Memories</div>
@@ -734,7 +814,66 @@
             </div>
         </div>
 
-        <!-- Final Message -->
+        <!-- Special Photo Gallery - PNG Images -->
+        <div class="photo-story-section">
+            <div class="section-header">
+                <h3 class="section-title">📸 More Beautiful Moments 📸</h3>
+                <p class="section-subtitle">Capturing every precious detail</p>
+            </div>
+            
+            <div class="photo-layout-2">
+                <div class="photo-card">
+                    <div class="photo-main">
+                        🌸💐<br>
+                        Flower Bouquet<br>
+                        & Cake Decoration
+                    </div>
+                    <div class="photo-caption">
+                        <div class="photo-title">Beautiful Flowers</div>
+                        <div class="photo-desc">Fresh flowers and elegant cake topper making everything perfect</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-main">
+                        🎀🎁<br>
+                        Gift Wrapping<br>
+                        & Surprise Setup
+                    </div>
+                    <div class="photo-caption">
+                        <div class="photo-title">Surprise Elements</div>
+                        <div class="photo-desc">Every detail wrapped with love and care</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-layout-1">
+                <div class="photo-card">
+                    <div class="photo-main">
+                        🎈🎊<br>
+                        Complete<br>
+                        Birthday Setup<br>
+                        Final Result
+                    </div>
+                    <div class="photo-caption">
+                        <div class="photo-title">The Grand Setup</div>
+                        <div class="photo-desc">Everything coming together for the perfect birthday celebration</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-main">
+                        ✨💖<br>
+                        Special<br>
+                        Details
+                    </div>
+                    <div class="photo-caption">
+                        <div class="photo-title">Magical Touches</div>
+                        <div class="photo-desc">Little details that make big differences</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="message-story">
             <div class="message-content">
                 <h2 class="message-heart-title">🌟 You Deserve Everything Good 🌟</h2>
