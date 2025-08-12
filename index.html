@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy 23rd Birthday! 🎉</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,7 +14,7 @@
         }
 
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(180deg, #ff6b9d, #ff8fab, #ffa8c5, #ffb3d9, #ffc0e8);
             min-height: 100vh;
             overflow-x: hidden;
@@ -82,6 +84,7 @@
 
         .hero-title {
             font-size: 3.5rem;
+            font-weight: 700;
             color: #fff;
             text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
             margin-bottom: 20px;
@@ -97,18 +100,12 @@
 
         .hero-subtitle {
             font-size: 1.4rem;
+            font-weight: 400;
             color: rgba(255, 255, 255, 0.95);
             position: relative;
             z-index: 3;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
             margin-bottom: 30px;
-        }
-
-        .birthday-emoji {
-            font-size: 4rem;
-            position: relative;
-            z-index: 3;
-            animation: rotate 4s linear infinite;
         }
 
         /* Hero video styling */
@@ -139,6 +136,12 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .video-placeholder:hover {
+            transform: scale(1.02);
         }
 
         .video-play-btn {
@@ -147,9 +150,14 @@
             animation: videoPulse 2s ease-in-out infinite;
         }
 
+        @keyframes videoPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
         .video-info {
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 500;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
@@ -167,7 +175,20 @@
             margin-top: 15px;
             color: rgba(255, 255, 255, 0.9);
             font-size: 1.1rem;
+            font-weight: 400;
             font-style: italic;
+        }
+
+        .birthday-emoji {
+            font-size: 4rem;
+            position: relative;
+            z-index: 3;
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Story sections */
@@ -207,6 +228,7 @@
         .activity-title {
             text-align: center;
             font-size: 2.5rem;
+            font-weight: 600;
             color: #ff1493;
             margin-bottom: 30px;
             text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.3);
@@ -264,7 +286,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 1.4rem;
             box-shadow: 0 6px 12px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
@@ -278,7 +300,7 @@
 
         .timeline-text {
             font-size: 1.2rem;
-            font-weight: bold;
+            font-weight: 500;
             color: #8b0045;
             transition: color 0.3s ease;
         }
@@ -301,6 +323,7 @@
 
         .section-title {
             font-size: 2.8rem;
+            font-weight: 600;
             color: #ff1493;
             text-shadow: 3px 3px 8px rgba(255, 105, 180, 0.4);
             margin-bottom: 15px;
@@ -322,6 +345,7 @@
 
         .section-subtitle {
             font-size: 1.2rem;
+            font-weight: 400;
             color: #d63384;
             font-style: italic;
         }
@@ -370,7 +394,7 @@
             justify-content: center;
             color: white;
             font-size: 1.3rem;
-            font-weight: bold;
+            font-weight: 500;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -397,37 +421,16 @@
 
         .photo-title {
             font-size: 1.3rem;
+            font-weight: 600;
             color: #ff1493;
-            font-weight: bold;
             margin-bottom: 8px;
         }
 
         .photo-desc {
             font-size: 1rem;
+            font-weight: 400;
             color: #8b0045;
             line-height: 1.5;
-        }
-
-        /* Video indicators */
-        .video-indicator {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            animation: videoPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes videoPulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); }
-            50% { transform: translate(-50%, -50%) scale(1.1); }
         }
 
         /* Message sections - story style */
@@ -465,6 +468,7 @@
 
         .message-heart-title {
             font-size: 2.5rem;
+            font-weight: 600;
             color: #ff1493;
             margin-bottom: 25px;
             text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.3);
@@ -473,6 +477,7 @@
 
         .message-text {
             font-size: 1.3rem;
+            font-weight: 400;
             color: #8b0045;
             line-height: 1.8;
             margin-bottom: 20px;
@@ -485,7 +490,200 @@
             background: linear-gradient(45deg, #ffb3d9, #ffc0cb);
             padding: 3px 8px;
             border-radius: 8px;
-            font-weight: bold;
+            font-weight: 600;
+        }
+
+        /* Final video section styling */
+        .final-video-section {
+            margin: 80px 0;
+            text-align: center;
+        }
+
+        .final-video-container {
+            margin: 40px 0;
+        }
+
+        .video-frame-large {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(255, 105, 180, 0.3);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 4px solid #ffb3d9;
+        }
+
+        .video-placeholder-large {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #ff1493, #ff69b4, #ff1493);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .video-placeholder-large:hover {
+            transform: scale(1.02);
+        }
+
+        .video-placeholder-large::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s linear infinite;
+        }
+
+        .video-play-btn-large {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            animation: videoPulse 2s ease-in-out infinite;
+            z-index: 2;
+            position: relative;
+        }
+
+        .video-info-large {
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            z-index: 2;
+            position: relative;
+        }
+
+        .video-duration-large {
+            background: rgba(0,0,0,0.7);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 1rem;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .video-caption-large {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #ff1493;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+        }
+
+        /* Final photo showcase */
+        .final-photo-showcase {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.8), rgba(255, 20, 147, 0.8));
+            border-radius: 30px;
+            padding: 50px 30px;
+            margin: 60px 0 40px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(255, 105, 180, 0.4);
+        }
+
+        .final-photo-showcase::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+                radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 80px 80px, 40px 40px;
+            animation: sparkleMove 15s linear infinite;
+        }
+
+        .showcase-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .showcase-frame {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .showcase-frame:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .showcase-photo {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab, #ffa8c5);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-photo::before {
+            content: '✨';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+        }
+
+        .showcase-message {
+            text-align: center;
+            color: white;
+        }
+
+        .showcase-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            animation: titlePulse 3s ease-in-out infinite;
+        }
+
+        .showcase-text {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .showcase-hearts {
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         /* Smooth scrolling */
@@ -581,12 +779,12 @@
             <!-- Opening Video -->
             <div class="hero-video-container">
                 <div class="video-frame">
-                    <div class="video-placeholder">
+                    <div class="video-placeholder" onclick="playVideo('video1.mp4')">
                         <div class="video-play-btn">▶️</div>
                         <div class="video-info">
                             📹 OPENING VIDEO<br>
                             <small>Birthday Surprise Behind the Scenes</small><br>
-                            <span class="video-duration">0:11</span>
+                            <span class="video-duration">video1.mp4</span>
                         </div>
                     </div>
                 </div>
@@ -629,25 +827,31 @@
             <div class="photo-layout-1">
                 <div class="photo-card">
                     <div class="photo-main">
-                        🎈✨<br>
-                        Beautiful Balloon<br>
-                        Number 23 Setup
+                        <img src="1.png" alt="Balloon Setup" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🎈✨<br>
+                            1.png<br>
+                            Balloon Setup
+                        </div>
                     </div>
                     <div class="photo-caption">
-                        <div class="photo-title">Perfect Age Display</div>
-                        <div class="photo-desc">Silver and pink balloons arranged perfectly for your 23rd birthday</div>
+                        <div class="photo-title">Getting Ready Together</div>
+                        <div class="photo-desc">Setting up the magical number 23 balloons for your special day</div>
                     </div>
                 </div>
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        🎁💖<br>
-                        Surprise Gifts<br>
-                        & Decorations
+                        <img src="2.png" alt="Balloon Decoration" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🎈💖<br>
+                            2.png<br>
+                            Balloon Decoration
+                        </div>
                     </div>
                     <div class="photo-caption">
-                        <div class="photo-title">Sweet Surprises</div>
-                        <div class="photo-desc">Special gifts and decorations prepared with love</div>
+                        <div class="photo-title">Perfect Decoration</div>
+                        <div class="photo-desc">Beautiful balloon arrangement ready for celebration</div>
                     </div>
                 </div>
             </div>
@@ -663,9 +867,12 @@
             <div class="photo-layout-2">
                 <div class="photo-card">
                     <div class="photo-main">
-                        🕯️💫<br>
-                        Making a Wish<br>
-                        Together
+                        <img src="3.png" alt="Wish Moment" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🕯️💫<br>
+                            3.png<br>
+                            Making a Wish
+                        </div>
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Sweet Wish Moment</div>
@@ -675,9 +882,12 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        🌟✨<br>
-                        Birthday Magic<br>
-                        Happening
+                        <img src="4.png" alt="Birthday Magic" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🌟✨<br>
+                            4.png<br>
+                            Birthday Magic
+                        </div>
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Wishes Come True</div>
@@ -712,9 +922,12 @@
             <div class="photo-layout-3">
                 <div class="photo-card">
                     <div class="photo-main">
-                        🎂🔪<br>
-                        First Cut<br>
-                        Together
+                        <img src="5.png" alt="Cake Cutting" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🎂🔪<br>
+                            5.png<br>
+                            First Cut
+                        </div>
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Special Moment</div>
@@ -724,10 +937,12 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        🍰🎉<br>
-                        Beautiful<br>
-                        Birthday Cake<br>
-                        Cutting Ceremony
+                        <img src="6.png" alt="Cake Ceremony" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🍰🎉<br>
+                            6.png<br>
+                            Cake Ceremony
+                        </div>
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Birthday Tradition</div>
@@ -747,10 +962,12 @@
             <div class="photo-layout-2">
                 <div class="photo-card">
                     <div class="photo-main">
-                        😊🍰<br>
-                        Happy<br>
-                        Birthday Girl<br>
-                        Enjoying Cake
+                        <img src="7.png" alt="Enjoying Cake" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            😊🍰<br>
+                            7.png<br>
+                            Enjoying Cake
+                        </div>
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Pure Joy</div>
@@ -760,14 +977,57 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        🍰💕<br>
-                        Sweet<br>
-                        Celebration<br>
-                        Moments
+                        <img src="8.png" alt="Sweet Celebration" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🍰💕<br>
+                            8.png<br>
+                            Sweet Celebration
+                        </div>
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Sweet Memories</div>
                         <div class="photo-desc">Capturing the joy of sharing cake together</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Photo Gallery - Additional PNG -->
+        <div class="photo-story-section">
+            <div class="section-header">
+                <h3 class="section-title">📸 More Beautiful Moments 📸</h3>
+                <p class="section-subtitle">Capturing every precious detail</p>
+            </div>
+            
+            <div class="photo-layout-1">
+                <div class="photo-card">
+                    <div class="photo-main">
+                        <img src="9.png" alt="Final Moment" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.style.display='none'; this.nextSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column;">
+                            🎈🎊<br>
+                            9.png<br>
+                            Final Moment
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        <div class="photo-title">Complete Celebration</div>
+                        <div class="photo-desc">Everything coming together for the perfect birthday celebration</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-main">
+                        <div onclick="playVideo('video2.mp4')" style="cursor: pointer; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; background: linear-gradient(135deg, #ff6b9d, #ff1493);">
+                            <div style="font-size: 3rem; margin-bottom: 10px; animation: videoPulse 2s ease-in-out infinite;">📹</div>
+                            <div style="font-size: 1.1rem; font-weight: 500; color: white; text-align: center;">
+                                VIDEO PREVIEW<br>
+                                <small>video2.mp4</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-caption">
+                        <div class="photo-title">Behind the Scenes</div>
+                        <div class="photo-desc">Special moments captured on video</div>
                     </div>
                 </div>
             </div>
@@ -814,66 +1074,7 @@
             </div>
         </div>
 
-        <!-- Special Photo Gallery - PNG Images -->
-        <div class="photo-story-section">
-            <div class="section-header">
-                <h3 class="section-title">📸 More Beautiful Moments 📸</h3>
-                <p class="section-subtitle">Capturing every precious detail</p>
-            </div>
-            
-            <div class="photo-layout-2">
-                <div class="photo-card">
-                    <div class="photo-main">
-                        🌸💐<br>
-                        Flower Bouquet<br>
-                        & Cake Decoration
-                    </div>
-                    <div class="photo-caption">
-                        <div class="photo-title">Beautiful Flowers</div>
-                        <div class="photo-desc">Fresh flowers and elegant cake topper making everything perfect</div>
-                    </div>
-                </div>
-                
-                <div class="photo-card">
-                    <div class="photo-main">
-                        🎀🎁<br>
-                        Gift Wrapping<br>
-                        & Surprise Setup
-                    </div>
-                    <div class="photo-caption">
-                        <div class="photo-title">Surprise Elements</div>
-                        <div class="photo-desc">Every detail wrapped with love and care</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="photo-layout-1">
-                <div class="photo-card">
-                    <div class="photo-main">
-                        🎈🎊<br>
-                        Complete<br>
-                        Birthday Setup<br>
-                        Final Result
-                    </div>
-                    <div class="photo-caption">
-                        <div class="photo-title">The Grand Setup</div>
-                        <div class="photo-desc">Everything coming together for the perfect birthday celebration</div>
-                    </div>
-                </div>
-                
-                <div class="photo-card">
-                    <div class="photo-main">
-                        ✨💖<br>
-                        Special<br>
-                        Details
-                    </div>
-                    <div class="photo-caption">
-                        <div class="photo-title">Magical Touches</div>
-                        <div class="photo-desc">Little details that make big differences</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Final Message -->
         <div class="message-story">
             <div class="message-content">
                 <h2 class="message-heart-title">🌟 You Deserve Everything Good 🌟</h2>
@@ -891,9 +1092,63 @@
                 </div>
             </div>
         </div>
+
+        <!-- Final Video Section -->
+        <div class="final-video-section">
+            <div class="section-header">
+                <h3 class="section-title">🎬 The Grand Finale 🎬</h3>
+                <p class="section-subtitle">Our complete birthday celebration story</p>
+            </div>
+            
+            <div class="final-video-container">
+                <div class="video-frame-large">
+                    <div class="video-placeholder-large" onclick="playVideo('video3.mp4')">
+                        <div class="video-play-btn-large">▶️</div>
+                        <div class="video-info-large">
+                            📹 FINAL CELEBRATION VIDEO<br>
+                            <small>Complete Birthday Story - All the magical moments together</small><br>
+                            <span class="video-duration-large">video3.mp4</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="video-caption-large">The complete story of your amazing 23rd birthday celebration! 🎊✨</p>
+            </div>
+        </div>
+
+        <!-- Final Beautiful Photo Section -->
+        <div class="final-photo-showcase">
+            <div class="showcase-container">
+                <div class="showcase-frame">
+                    <div class="showcase-photo">
+                        🎂🌸<br>
+                        Perfect Birthday<br>
+                        Complete Setup<br>
+                        <small>Cake, Flowers, Balloons & Love</small>
+                    </div>
+                </div>
+                <div class="showcase-message">
+                    <h2 class="showcase-title">💖 Forever in My Heart 💖</h2>
+                    <p class="showcase-text">
+                        This beautiful moment, this perfect day, and most importantly - 
+                        <strong>YOU</strong> - will forever be treasured in my heart. 
+                        Happy 23rd Birthday, my love! 🎉💕
+                    </p>
+                    <div class="showcase-hearts">
+                        💖 🌟 💖 🌟 💖
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
+        // Video play function
+        function playVideo(filename) {
+            alert(`Playing video: ${filename}\n\nNote: Replace this alert with actual video player implementation.\nAdd your video files to the same folder as this HTML file.`);
+            // In real implementation, you would open a video player or modal
+            // Example: window.open(filename, '_blank');
+        }
+
         // Smooth scroll to specific sections
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
@@ -994,11 +1249,12 @@
                 message.style.padding = '25px 45px';
                 message.style.borderRadius = '25px';
                 message.style.fontSize = '1.4rem';
+                message.style.fontWeight = '500';
                 message.style.textAlign = 'center';
                 message.style.zIndex = '10000';
                 message.style.boxShadow = '0 25px 50px rgba(0,0,0,0.3)';
                 message.style.border = '3px solid rgba(255, 255, 255, 0.3)';
-                message.innerHTML = '🎂 Welcome to Your Birthday Story! 🎂<br><small style="font-size: 1rem;">Click the timeline to explore each chapter! 📖✨</small>';
+                message.innerHTML = '🎂 Welcome to Your Birthday Story! 🎂<br><small style="font-size: 1rem; font-weight: 400;">Click the timeline to explore each chapter! 📖✨</small>';
                 
                 document.body.appendChild(message);
                 
