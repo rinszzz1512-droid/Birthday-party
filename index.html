@@ -844,7 +844,7 @@
             <!-- Opening Video -->
             <div class="hero-video-container">
                 <div class="video-frame">
-                    <video controls style="width: 100%; border-radius: 15px;" poster="">
+                    <video autoplay muted loop controls style="width: 100%; border-radius: 15px;" poster="">
                         <source src="./video1.mp4" type="video/mp4">
                         <div class="video-placeholder">
                             <div class="video-play-btn">▶️</div>
@@ -1085,7 +1085,7 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        <video controls style="width: 100%; height: auto; min-height: 300px; border-radius: 10px;">
+                        <video autoplay muted loop controls style="width: 100%; height: auto; min-height: 300px; border-radius: 10px;">
                             <source src="./video2.mp4" type="video/mp4">
                             <div style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column; background: linear-gradient(135deg, #ff6b9d, #ff1493);">
                                 <div style="font-size: 3rem; margin-bottom: 10px; color: white;">📹</div>
@@ -1173,7 +1173,7 @@
             
             <div class="final-video-container">
                 <div class="video-frame-large">
-                    <video controls style="width: 100%; border-radius: 20px;">
+                    <video autoplay muted loop controls style="width: 100%; border-radius: 20px;">
                         <source src="./video3.mp4" type="video/mp4">
                         <div class="video-placeholder-large">
                             <div class="video-play-btn-large">▶️</div>
@@ -1331,7 +1331,7 @@
             }
         });
 
-        // Welcome message
+        // Welcome message - removed click timeline instruction
         window.addEventListener('load', function() {
             setTimeout(() => {
                 const message = document.createElement('div');
@@ -1349,7 +1349,7 @@
                 message.style.zIndex = '10000';
                 message.style.boxShadow = '0 25px 50px rgba(0,0,0,0.3)';
                 message.style.border = '3px solid rgba(255, 255, 255, 0.3)';
-                message.innerHTML = '🎂 Welcome to Your Birthday Story! 🎂<br><small style="font-size: 1rem; font-weight: 400;">Click the timeline to explore each chapter! 📖✨</small>';
+                message.innerHTML = '🎂 Welcome to Your Birthday Story! 🎂';
                 
                 document.body.appendChild(message);
                 
@@ -1358,7 +1358,7 @@
                     message.style.opacity = '0';
                     message.style.transform = 'translate(-50%, -50%) scale(0.8)';
                     setTimeout(() => message.remove(), 1000);
-                }, 4000);
+                }, 3000);
             }, 1500);
         });
     </script>
