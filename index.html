@@ -1005,13 +1005,16 @@
                 
                 <div class="photo-card">
                     <div class="photo-main">
-                        <div style="width: 100%; height: auto; min-height: 300px; border-radius: 10px; background: linear-gradient(135deg, #ff6b9d, #ff1493); display: flex; align-items: center; justify-content: center; flex-direction: column; color: white;">
-                            <div style="font-size: 3rem; margin-bottom: 10px;">📹</div>
-                            <div style="font-size: 1.1rem; font-weight: 500; text-align: center;">
-                                CELEBRATION VIDEO<br>
-                                <small>video2.mp4 - Behind the Scenes</small>
+                        <video autoplay muted loop controls style="width: 100%; height: auto; min-height: 300px; object-fit: cover; border-radius: 10px;">
+                            <source src="./video2.mp4" type="video/mp4">
+                            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, #ff6b9d, #ff1493); display: flex; align-items: center; justify-content: center; flex-direction: column; color: white;">
+                                <div style="font-size: 3rem; margin-bottom: 10px;">📹</div>
+                                <div style="font-size: 1.1rem; font-weight: 500; text-align: center;">
+                                    CELEBRATION VIDEO<br>
+                                    <small>video2.mp4 - Behind the Scenes</small>
+                                </div>
                             </div>
-                        </div>
+                        </video>
                     </div>
                     <div class="photo-caption">
                         <div class="photo-title">Cake Ceremony Video</div>
@@ -1170,14 +1173,17 @@
             
             <div class="final-video-container">
                 <div class="video-frame-large">
-                    <div class="video-placeholder-large">
-                        <div class="video-play-btn-large">▶️</div>
-                        <div class="video-info-large">
-                            📹 FINAL CELEBRATION VIDEO<br>
-                            <small>Complete Birthday Story - All the magical moments together</small><br>
-                            <span class="video-duration-large">video3.mp4</span>
+                    <video autoplay muted loop controls style="width: 100%; border-radius: 20px;">
+                        <source src="./video3.mp4" type="video/mp4">
+                        <div class="video-placeholder-large">
+                            <div class="video-play-btn-large">▶️</div>
+                            <div class="video-info-large">
+                                📹 FINAL CELEBRATION VIDEO<br>
+                                <small>Complete Birthday Story - All the magical moments together</small><br>
+                                <span class="video-duration-large">video3.mp4</span>
+                            </div>
                         </div>
-                    </div>
+                    </video>
                 </div>
                 <p class="video-caption-large">The complete story of your amazing 23rd birthday celebration! 🎊✨</p>
             </div>
